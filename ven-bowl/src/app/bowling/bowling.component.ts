@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BowlingComponent implements OnInit {
   private currentFrame = 0;
-  private currentScore = 0;
+  public currentScore = 0;
   nextFrame = 0;
   public frames = [
     {frame:1, firstBall:0, secondBall:0, framescore: 0},
@@ -31,6 +31,10 @@ export class BowlingComponent implements OnInit {
   getVal(val,frame,ball){
     console.log(val, frame,ball)
 
+    if (val>10 || val<0) {
+      alert("Invalid pin count");
+      val=0;
+    }
     if (ball===1) {
       this.frames[frame].firstBall = +val;
     }
