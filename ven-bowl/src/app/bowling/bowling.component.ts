@@ -66,12 +66,12 @@ export class BowlingComponent implements OnInit {
         if (n.firstBall === 10 ) {
         //   n.framescore += this.frames[currentFrame].firstBall + this.frames[currentFrame].secondBall;
         //Get next two balls
-        n.framescore += this.frames[currentFrameArrayIndex+1].firstBall;
-          if  (this.frames[currentFrameArrayIndex+1].firstBall === 10) {
-            n.framescore += this.frames[currentFrameArrayIndex+2].firstBall
-          } else {
-            n.framescore += this.frames[currentFrameArrayIndex+1].secondBall;
-          }
+        n.framescore += this.frames[currentFrameArrayIndex+1].firstBall + this.frames[currentFrameArrayIndex+2].firstBall;
+          // if  (this.frames[currentFrameArrayIndex+1].firstBall === 10) {
+          //   n.framescore += this.frames[currentFrameArrayIndex+2].firstBall
+          // } else {
+          //   n.framescore += this.frames[currentFrameArrayIndex+1].secondBall;
+          // }
         }
 
         //Handle a spare
