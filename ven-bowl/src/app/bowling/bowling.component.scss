@@ -2,9 +2,9 @@
 .content {
   margin: 15px;
   display: grid;
-  grid-template-columns: 40px 40px 40px 40px;
-  grid-template-rows: repeat(11, 30px);
-  grid-template-areas: "frame Ball1 Ball2 Score"
+  grid-template-columns: 60px 60px 60px 60px;
+  grid-template-rows: repeat(14, 35px);
+  grid-template-areas: "frame Ball1 Ball2 FrameScore"
                         "fr1-number fr1-b1 fr1-b2 fr1-score"
                         "fr2-number fr2-b1 fr2-b2 fr2-score"
                         "fr3-number fr3-b1 fr3-b2 fr3-score"
@@ -14,11 +14,38 @@
                         "fr7-number fr7-b1 fr7-b2 fr7-score"
                         "fr8-number fr8-b1 fr8-b2 fr8-score"
                         "fr9-number fr9-b1 fr9-b2 fr9-score"
-                        "fr10-number fr10-b1 fr10-b2 fr10-score";
+                        "fr10-number fr10-b1 fr10-b2 fr10-score"
+                        "extraBall1Label extraBall1Label extraBall1  ."
+                        "extraBall2Label extraBall2Label extraBall2 ."
+                        "scoreLabel score . .";
+}
+.extraBall1 {
+  background-color: lightblue;
+  grid-area: extraBall1;
+}
 
-                        // "extraBall1 extraball2 . ."
-                        // "Score . . ."
-                        // ;
+.extraBall1Label {
+  background-color: lightblue;
+  grid-area: extraBall1Label;
+}
+
+.extraBall2Label {
+  background-color: lightblue;
+  grid-area: extraBall2Label;
+}
+.extraBall2 {
+  background-color: lightskyblue;
+  grid-area: extraBall2;
+}
+
+.score {
+  background-color: lightblue;
+  grid-area: score;
+}
+
+.scoreLabel {
+  background-color: lightblue;
+  grid-area: scoreLabel;
 }
 
 .header {
