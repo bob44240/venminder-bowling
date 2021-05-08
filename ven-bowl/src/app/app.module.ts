@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SplashScreenComponent } from './splash-screen/splash-screen.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BowlingComponent } from './bowling/bowling.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SplashScreenComponent
+    SplashScreenComponent,
+    BowlingComponent
   ],
   imports: [
     BrowserModule,

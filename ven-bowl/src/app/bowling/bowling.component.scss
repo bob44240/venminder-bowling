@@ -1,0 +1,235 @@
+
+.content {
+  margin: 15px;
+  display: grid;
+  grid-template-columns: 40px 40px 40px 40px;
+  grid-template-rows: repeat(11, 30px);
+  grid-template-areas: "frame Ball1 Ball2 Score"
+                        "fr1-number fr1-b1 fr1-b2 fr1-score"
+                        "fr2-number fr2-b1 fr2-b2 fr2-score"
+                        "fr3-number fr3-b1 fr3-b2 fr3-score"
+                        "fr4-number fr4-b1 fr4-b2 fr4-score"
+                        "fr5-number fr5-b1 fr5-b2 fr5-score"
+                        "fr6-number fr6-b1 fr6-b2 fr6-score"
+                        "fr7-number fr7-b1 fr7-b2 fr7-score"
+                        "fr8-number fr8-b1 fr8-b2 fr8-score"
+                        "fr9-number fr9-b1 fr9-b2 fr9-score"
+                        "fr10-number fr10-b1 fr10-b2 fr10-score";
+
+                        // "extraBall1 extraball2 . ."
+                        // "Score . . ."
+                        // ;
+}
+
+.header {
+  background-color: lightgray;
+  grid-area: header;
+}
+
+.fr1-number {
+  background-color: #1976d2;
+  grid-area: fr1-number;
+}
+
+.fr1-b1 {
+  background-color: #1976d2;
+  grid-area: fr1-b1;
+}
+
+.fr1-b2 {
+  background-color: #1976d2;
+  grid-area: fr1-b2;
+}
+
+.fr1-score {
+  background-color: #1976d2;
+  grid-area: fr1-score;
+}
+
+//Frame 2
+.fr2-number {
+  background-color: #1976d2;
+  grid-area: fr2-number;
+}
+
+.fr2-b1 {
+  background-color: #1976d2;
+  grid-area: fr2-b1;
+}
+
+.fr2-b2 {
+  background-color: #1976d2;
+  grid-area: fr2-b2;
+}
+
+.fr2-score {
+  background-color: #1976d2;
+  grid-area: fr2-score;
+}
+
+//Frame 3
+.fr3-number {
+  background-color: #1976d2;
+  grid-area: fr3-number;
+}
+
+.fr3-b1 {
+  background-color: #1976d2;
+  grid-area: fr3-b1;
+}
+
+.fr3-b2 {
+  background-color: #1976d2;
+  grid-area: fr3-b2;
+}
+
+.fr3-score {
+  background-color: #1976d2;
+  grid-area: fr3-score;
+}
+
+//Frame4
+.fr4-number {
+  background-color: #1976d2;
+  grid-area: fr4-number;
+}
+
+.fr4-b1 {
+  background-color: #1976d2;
+  grid-area: fr4-b1;
+}
+
+.fr4-b2 {
+  background-color: #1976d2;
+  grid-area: fr4-b2;
+}
+
+.fr4-score {
+  background-color: #1976d2;
+  grid-area: fr4-score;
+}
+
+//Frame 5
+.fr5-number {
+  background-color: #1976d2;
+  grid-area: fr5-number;
+}
+
+.fr5-b1 {
+  background-color: #1976d2;
+  grid-area: fr5-b1;
+}
+
+.fr5-b2 {
+  background-color: #1976d2;
+  grid-area: fr5-b2;
+}
+
+.fr5-score {
+  background-color: #1976d2;
+  grid-area: fr5-score;
+}
+
+//Frame 6
+.fr6-number {
+  background-color: #1976d2;
+  grid-area: fr6-number;
+}
+
+.fr6-b1 {
+  background-color: #1976d2;
+  grid-area: fr6-b1;
+}
+
+.fr6-b2 {
+  background-color: #1976d2;
+  grid-area: fr6-b2;
+}
+
+.fr6-score {
+  background-color: #1976d2;
+  grid-area: fr6-score;
+}
+
+//Frame 7
+.fr7-number {
+  background-color: #1976d2;
+  grid-area: fr7-number;
+}
+
+.fr7-b1 {
+  background-color: #1976d2;
+  grid-area: fr7-b1;
+}
+
+.fr7-b2 {
+  background-color: #1976d2;
+  grid-area: fr7-b2;
+}
+
+.fr7-score {
+  background-color: #1976d2;
+  grid-area: fr7-score;
+}
+
+//Frame 8
+.fr8-number {
+  background-color: #1976d2;
+  grid-area: fr8-number;
+}
+
+.fr8-b1 {
+  background-color: #1976d2;
+  grid-area: fr8-b1;
+}
+
+.fr8-b2 {
+  background-color: #1976d2;
+  grid-area: fr8-b2;
+}
+
+.fr8-score {
+  background-color: #1976d2;
+  grid-area: fr8-score;
+}
+
+//Frame 9
+.fr9-number {
+  background-color: #1976d2;
+  grid-area: fr9-number;
+}
+
+.fr9-b1 {
+  background-color: #1976d2;
+  grid-area: fr9-b1;
+}
+
+.fr9-b2 {
+  background-color: #1976d2;
+  grid-area: fr9-b2;
+}
+
+.fr9-score {
+  background-color: #1976d2;
+  grid-area: fr9-score;
+}
+
+.fr10-number {
+  background-color: #1976d2;
+  grid-area: fr10-number;
+}
+
+.fr10-b1 {
+  background-color: #1976d2;
+  grid-area: fr10-b1;
+}
+
+.fr10-b2 {
+  background-color: #1976d2;
+  grid-area: fr10-b2;
+}
+
+.fr10-score {
+  background-color: #1976d2;
+  grid-area: fr10-score;
+}
