@@ -34,6 +34,7 @@ export class BowlingComponent implements OnInit {
     if (val>10 || val<0) {
       alert("Invalid pin count");
       val=0;
+      return;
     }
     if (ball===1) {
       this.frames[frame].firstBall = +val;
@@ -43,6 +44,11 @@ export class BowlingComponent implements OnInit {
       this.frames[frame].secondBall = +val;
     }
 
+    if  ((this.frames[frame].firstBall +  this.frames[frame].secondBall)>10 ) {
+      alert("Invalid frame score.  Total must be less than 10")
+      return;
+    }
+
     this.score();
     console.log("score: ",this.currentScore)
     console.log(this.frames)
@@ -50,27 +56,35 @@ export class BowlingComponent implements OnInit {
 
   score(){
     this.currentScore = 0;
-    let currentFrame = 0;
+    let currentFrameArrayIndex = 0;
     this.frames.forEach( n=> {
-     // console.log(n);
-      currentFrame = n.frame;
-      if (currentFrame<11) {
+      currentFrameArrayIndex = n.frame-1;
+      if (currentFrameArrayIndex<10) {
         n.framescore = n.firstBall + n.secondBall;
+
+        //Handle a strike
         if (n.firstBall === 10 ) {
-          n.framescore += this.frames[currentFrame].firstBall + this.frames[currentFrame].secondBall;
-          if  (this.frames[currentFrame].firstBall === 10) {
-            n.framescore += this.frames[currentFrame+1].firstBall
+        //   n.framescore += this.frames[currentFrame].firstBall + this.frames[currentFrame].secondBall;
+        //Get next two balls
+        n.framescore += this.frames[currentFrameArrayIndex+1].firstBall;
+          if  (this.frames[currentFrameArrayIndex+1].firstBall === 10) {
+            n.framescore += this.frames[currentFrameArrayIndex+2].firstBall
+          } else {
+            n.framescore += this.frames[currentFrameArrayIndex+1].secondBall;
           }
         }
-        this.currentScore = 0;
-        this.frames.forEach( n=> {
-          this.currentScore += +n.framescore;
-        })
+
+        //Handle a spare
+        if (n.firstBall != 10 && n.framescore==10) {
+          n.framescore += this.frames[currentFrameArrayIndex+1].firstBall;
+        }
       }
+    })
 
-      //console.log(this.frames)
-
+    ////Now calc score
+    this.currentScore = 0;
+    this.frames.forEach( n=> {
+      this.currentScore += +n.framescore;
     })
   }
-
 }
